@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia Neizhko | Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Image Viewing Modal -->
+    <div id="certModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <div class="language-switcher">
+        <i class="fas fa-language"></i>
+        <div class="lang-options">
+            <span onclick="setLanguage('en')">ENG</span>
+            <span onclick="setLanguage('ua')">UA</span>
+            <span onclick="setLanguage('fr')">FR</span>
+            <span onclick="setLanguage('ee')">EE</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#who-am-i" data-i18n="nav_who">Who am I?</a></li>
+            <li><a href="#internship" data-i18n="nav_intern">Internship</a></li>
+            <li><a href="#education" data-i18n="nav_edu">Education</a></li>
+            <li><a href="#cv" data-i18n="nav_cv">My CV</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#activities" data-i18n="nav_activities">Activities</a></li>
+            <li><a href="#work-experience" data-i18n="nav_work">Work Experience</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-header reveal">
+        <h1 data-i18n="header_title">My Resume</h1>
+        <h2 data-i18n="header_name">Anastasiia Neizhko</h2>
+    </header>
+
+    <main>
+        <section id="who-am-i" class="section reveal">
+            <div class="container intro-container">
+                <div class="photo-container">
+                    <img src="intro-photo.svg" alt="Anastasiia Neizhko" class="profile-photo">
+                </div>
+                <div class="text-container">
+                    <h2 data-i18n="who_title">Who am I?</h2>
+                    <p data-i18n="who_text">Hi! My name is Anastasiia Neizhko and I am 18 years old. I am currently a Business & Administration student in TalTech university and a very active participant in volunteering and different activities. Also, I am quite observant to details and like to develop and learn more as I get a chance. I would like to share my skills and experience with you.</p>
+                    <div class="visual-accent"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="internship" class="section reveal">
+            <div class="container">
+                <h2 data-i18n="intern_title">Internship</h2>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h4 data-i18n="intern_placeholder_title">Internship</h4>
+                        <p data-i18n="intern_placeholder_desc">Currently seeking internship opportunities to apply my skills in a professional environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section reveal">
+            <div class="container">
+                <h2 data-i18n="edu_title">Education</h2>
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <i class="fas fa-university"></i>
+                        <h3 data-i18n="edu_taltech">TalTech University</h3>
+                        <span class="date">2025 - Present</span>
+                        <p data-i18n="edu_taltech_desc">First year Business Administration student in Tallinn University of Technology.</p>
+                        <a href="https://taltech.ee/" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="visit_website">Visit Website</span></a>
+                    </div>
+                    <div class="edu-card">
+                        <i class="fas fa-school"></i>
+                        <h3 data-i18n="edu_high">CDE European Collegium</h3>
+                        <span class="date">Graduated 2025</span>
+                        <p data-i18n="edu_high_desc">Completed secondary education with strong academic results.</p>
+                        <a href="https://www.eurocollegium.com/en/pro-nas/" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="visit_website">Visit Website</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="section reveal">
+            <div class="container cv-display">
+                <h2 data-i18n="cv_header">My CV</h2>
+                <div class="cv-content-box">
+                    <div class="cv-column">
+                        <h3 data-i18n="cv_about_title">About Me</h3>
+                        <p data-i18n="cv_about_text">Punctual, can handle any challenges well, positive, interested in various topics, have great communication skills, and fast learner.</p>
+                        
+                        <h3 data-i18n="cv_edu_title">Education</h3>
+                        <ul>
+                            <li data-i18n="cv_edu_1">Graduated high school</li>
+                            <li data-i18n="cv_edu_2">First year Business Administration student in Tallinn University of Technology</li>
+                        </ul>
+                    </div>
+                    <div class="cv-column">
+                        <h3 data-i18n="cv_work_title">Work Experience</h3>
+                        <ul>
+                            <li data-i18n="cv_work_1">Counselor at a children's camp</li>
+                            <li data-i18n="cv_work_2">Dog sitter</li>
+                            <li data-i18n="cv_work_3">Volunteering (data research, mentoring, activism, teamwork)</li>
+                        </ul>
+                        
+                        <h3 data-i18n="cv_skills_title">Additional Info</h3>
+                        <p data-i18n="cv_skills_text">Experienced in Canva, PowerPoint, and advanced writing. Actively involved in social projects and youth camps.</p>
+                    </div>
+                </div>
+                <div class="cv-download-area">
+                    <button onclick="openModal('Resume_new.png', 'Anastasiia Neizhko Resume')" class="cert-link-btn">
+                        <i class="fas fa-image"></i>
+                        <span data-i18n="cv_view">View CV</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section reveal">
+            <div class="container">
+                <h2 data-i18n="skills_title">Skills & Languages</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-i18n="hard_skills">Hard Skills</h3>
+                        <div class="tags">
+                            <span class="tag" data-i18n="skill_vibe">Vibe Coding</span>
+                            <span class="tag" data-i18n="skill_canva">Canva Design</span>
+                            <span class="tag" data-i18n="skill_ppt">PowerPoint</span>
+                            <span class="tag" data-i18n="skill_excel">Excel</span>
+                            <span class="tag" data-i18n="skill_writing">Advanced Writing</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="soft_skills">Soft Skills</h3>
+                        <div class="tags">
+                            <span class="tag" data-i18n="skill_observation">Observation</span>
+                            <span class="tag" data-i18n="skill_comm">Communication</span>
+                            <span class="tag" data-i18n="skill_adapt">Adaptability</span>
+                            <span class="tag" data-i18n="skill_time">Time Management</span>
+                            <span class="tag" data-i18n="skill_creat">Creativity</span>
+                            <span class="tag" data-i18n="skill_team">Teamwork</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="languages">Languages</h3>
+                        <div class="tags">
+                            <span class="tag" data-i18n="lang_ua">Ukrainian (Native)</span>
+                            <span class="tag" data-i18n="lang_ru">russian (Native)</span>
+                            <span class="tag" data-i18n="lang_en">English (C1)</span>
+                            <span class="tag" data-i18n="lang_fr">French (A2)</span>
+                            <span class="tag" data-i18n="lang_ee">Estonian (A1)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="section reveal">
+            <div class="container">
+                <h2 data-i18n="act_title">Activities</h2>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Teenergizer</h4>
+                        <p data-i18n="act_teen">Volunteer and mentor for sex education and mental health training in Ukraine.</p>
+                        <button onclick="openModal('Teenergizer_Extracted/49176131-b5ab-41f9-8368-de296058c43e-0.jpg', 'Teenergizer Certificate')" class="cert-link-btn"><i class="fas fa-image"></i> <span data-i18n="view_cert">View Certificate</span></button>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-palette"></i>
+                        <h4>HIV Awareness</h4>
+                        <p data-i18n="act_hiv">Created "HIV Awareness/Art exhibition" with "Human Rights Center" in Estonia.</p>
+                        <button onclick="openModal('Human_Rights_Certificate.jpg', 'HIV Awareness Certificate')" class="cert-link-btn"><i class="fas fa-image"></i> <span data-i18n="view_cert">View Certificate</span></button>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4 data-i18n="act_startup_title">Startup Garage</h4>
+                        <p data-i18n="act_startup_desc">Designer in marketing team</p>
+                        <a href="https://www.startupgarage.ee/" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="visit_website">Visit Website</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-experience" class="section reveal">
+            <div class="container">
+                <h2 data-i18n="work_title">Work Experience</h2>
+                <div class="experience-item">
+                    <h3 data-i18n="exp_camp">Counselor at a children's camp</h3>
+                    <p data-i18n="exp_camp_desc">Responsible for the safety, well-being, and entertainment of children.</p>
+                </div>
+                <div class="experience-item">
+                    <h3 data-i18n="exp_dog">Dog sitter</h3>
+                    <p data-i18n="exp_dog_desc">Caring for pets and ensuring they are happy and healthy while their owners are away.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-group">
+                <h3 data-i18n="connect">Connect with me</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/nastia_.ange" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/anastasiia-neizhko" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-group">
+                <h3 data-i18n="contacts">Contact Details</h3>
+                <p><i class="fas fa-phone"></i> +380 (50) 297 09 97</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:nastya7neizhko@gmail.com">nastya7neizhko@gmail.com</a></p>
+                <p><i class="fas fa-university"></i> anasne@taltech.ee</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Anastasiia Neizhko</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                nav_who: "Who am I?", nav_edu: "Education", nav_cv: "My CV", nav_skills: "Skills", nav_activities: "Activities", nav_work: "Work Experience", nav_intern: "Internship",
+                header_title: "My Resume", header_name: "Anastasiia Neizhko",
+                who_title: "Who am I?", who_text: "Hi! My name is Anastasiia Neizhko and I am 18 years old. I am currently a Business & Administration student in TalTech university and a very active participant in volunteering and different activities. Also, I am quite observant to details and like to develop and learn more as I get a chance. I would like to share my skills and experience with you.",
+                edu_title: "Education", edu_taltech: "TalTech University", edu_taltech_desc: "First year Business Administration student in Tallinn University of Technology.", edu_high: "CDE European Collegium", edu_high_desc: "Completed secondary education with strong academic results.",
+                intern_title: "Internship", intern_placeholder_title: "Internship", intern_placeholder_desc: "Currently seeking internship opportunities to apply my skills in a professional environment.",
+                cv_header: "My CV", cv_about_title: "About Me", cv_about_text: "Punctual, can handle any challenges well, positive, interested in various topics, have great communication skills, and fast learner.", cv_edu_title: "Education", cv_edu_1: "Graduated high school", cv_edu_2: "First year Business Administration student in Tallinn University of Technology", cv_work_title: "Work Experience", cv_work_1: "Counselor at a children's camp", cv_work_2: "Dog sitter", cv_work_3: "Volunteering (data research, mentoring, activism, teamwork)", cv_skills_title: "Additional Info", cv_skills_text: "Experienced in Canva, PowerPoint, and advanced writing. Actively involved in social projects and youth camps.",
+                skills_title: "Skills & Languages", hard_skills: "Hard Skills", soft_skills: "Soft Skills", languages: "Languages",
+                skill_vibe: "Vibe Coding", skill_canva: "Canva Design", skill_ppt: "PowerPoint", skill_excel: "Excel", skill_writing: "Advanced Writing",
+                skill_observation: "Observation", skill_comm: "Communication", skill_adapt: "Adaptability", skill_time: "Time Management", skill_creat: "Creativity", skill_team: "Teamwork",
+                lang_ua: "Ukrainian (Native)", lang_ru: "russian (Native)", lang_en: "English (C1)", lang_fr: "French (A2)", lang_ee: "Estonian (A1)",
+                cv_title: "CV", cv_text: "View my full curriculum vitae to see a comprehensive overview of my background and qualifications.", cv_view: "View CV",
+                act_title: "Activities", act_teen: "Volunteer and mentor for sex education and mental health training in Ukraine.", act_hiv: "Created \"HIV Awareness/Art exhibition\" with \"Human Rights Center\" in Estonia.", act_startup_title: "Startup Garage", act_startup_desc: "Designer in marketing team",
+                view_cert: "View Certificate", visit_website: "Visit Website", work_title: "Work Experience",
+                exp_camp: "Counselor at a children's camp", exp_camp_desc: "Responsible for the safety, well-being, and entertainment of children.",
+                exp_dog: "Dog sitter", exp_dog_desc: "Caring for pets and ensuring they are happy and healthy while their owners are away.",
+                connect: "Connect with me", contacts: "Contact Details"
+            },
+            ua: {
+                nav_who: "Хто я?", nav_edu: "Освіта", nav_cv: "Моє Резюме", nav_skills: "Навички", nav_activities: "Діяльність", nav_work: "Досвід роботи", nav_intern: "Стажування",
+                header_title: "Моє Резюме", header_name: "Анастасія Неїжко",
+                who_title: "Хто я?", who_text: "Привіт! Мене звати Анастасія Неїжко, мені 18 років. Наразі я студентка факультету бізнесу та адміністрування в університеті TalTech та активна учасниця волонтерських рухів. Я уважна до деталей і люблю розвиватися. Я хотіла б поділитися своїми навичками та досвідом з вами.",
+                edu_title: "Освіта", edu_taltech: "Талліннський технічний університет", edu_taltech_desc: "Студентка першого курсу бізнес-адміністрування в Талліннському технічному університеті.", edu_high: "CDE Європейський Колегіум", edu_high_desc: "Закінчила середню освіту з високими академічними результатами.",
+                intern_title: "Стажування", intern_placeholder_title: "Стажування", intern_placeholder_desc: "Наразі я шукаю можливості для стажування, щоб застосувати свої навички у професійному середовищі.",
+                cv_header: "Моє Резюме", cv_about_title: "Про мене", cv_about_text: "Пунктуальна, добре справляюся з будь-якими викликами, позитивна, цікавлюся різними темами, маю чудові комунікативні навички та швидко навчаюся.", cv_edu_title: "Освіта", cv_edu_1: "Закінчила середню школу", cv_edu_2: "Студентка першого курсу бізнес-адміністрування в Талліннського технічного університету", cv_work_title: "Досвід роботи", cv_work_1: "Вожата в дитячому таборі", cv_work_2: "Догляд за собаками", cv_work_3: "Волонтерство (дослідження даних, менторство, активізм, робота в команді)", cv_skills_title: "Додаткова інформація", cv_skills_text: "Досвід роботи в Canva, PowerPoint та навички написання текстів. Активно залучена до соціальних проектів та молодіжних таборів.",
+                skills_title: "Навички та Мови", hard_skills: "Професійні навички", soft_skills: "Особисті навички", languages: "Мови",
+                skill_vibe: "Вайб-кодинг", skill_canva: "Дизайн у Canva", skill_ppt: "PowerPoint", skill_excel: "Excel", skill_writing: "Письмова грамотність",
+                skill_observation: "Спостережливість", skill_comm: "Комунікація", skill_adapt: "Адаптивність", skill_time: "Тайм-менеджмент", skill_creat: "Креативність", skill_team: "Робота в команді",
+                lang_ua: "Українська (Рідна)", lang_ru: "russian (Рідна)", lang_en: "Англійська (C1)", lang_fr: "Французька (A2)", lang_ee: "Естонська (A1)",
+                cv_title: "Резюме", cv_text: "Перегляньте моє повне резюме, щоб побачити детальний огляд моєї освіти та кваліфікації.", cv_view: "Переглянути CV",
+                act_title: "Діяльність", act_teen: "Волонтер та ментор з сексуальної освіти та тренінгів з ментального здоров'я в «Teenergizer» в Україні.", act_hiv: "Створила проект з командою «ВІЛ-обізнаність/Арт-виставка» за підтримки «Центру прав людини» в Естонії.", act_startup_title: "Startup Garage", act_startup_desc: "Дизайнер у команді маркетингу",
+                view_cert: "Переглянути сертифікат", visit_website: "Відвідати сайт", work_title: "Досвід роботи",
+                exp_camp: "Вожата в дитячому таборі", exp_camp_desc: "Відповідальна за безпеку, добробут та розваги дітей.",
+                exp_dog: "Догляд за собаками", exp_dog_desc: "Догляд за домашніми тваринами, забезпечення їхнього комфорту під час відсутності господарів.",
+                connect: "Зв'яжіться зі мною", contacts: "Контактна інформація"
+            },
+            fr: {
+                nav_who: "Qui suis-je ?", nav_edu: "Éducation", nav_cv: "Mon CV", nav_skills: "Compétences", nav_activities: "Activités", nav_work: "Expérience", nav_intern: "Stage",
+                header_title: "Mon CV", header_name: "Anastasiia Neizhko",
+                who_title: "Qui suis-je ?", who_text: "Salut ! Je m'appelle Anastasiia Neizhko et j'ai 18 ans. Je suis étudiante en Business & Administration à l'université TalTech. Je suis attentive aux détails et j'aime apprendre. Je souhaite partager mes compétences avec vous.",
+                edu_title: "Éducation", edu_taltech: "Université TalTech", edu_taltech_desc: "Étudiante en première année de Business Administration à l'Université de Technologie de Tallinn.", edu_high: "CDE European Collegium", edu_high_desc: "Diplômée de l'enseignement secondaire with d'excellents résultats académiques.",
+                intern_title: "Stage", intern_placeholder_title: "Stage", intern_placeholder_desc: "Actuellement à la recherche d'opportunités de stage pour appliquer mes compétences dans un environnement professionnel.",
+                cv_header: "Mon CV", cv_about_title: "À propos de moi", cv_about_text: "Ponctuelle, capable de relever tous les défis, positive, intéressée par divers sujets, dotée d'excellentes capacités de communication et apprenant rapidement.", cv_edu_title: "Éducation", cv_edu_1: "Diplômée du lycée", cv_edu_2: "Étudiante en première année de Business Administration à l'Université de Technologie de Tallinn", cv_work_title: "Expérience professionnelle", cv_work_1: "Animatrice dans un camp pour enfants", cv_work_2: "Gardienne de chiens", cv_work_3: "Bénévolat (recherche de données, mentorat, activisme, travail d'équipe)", cv_skills_title: "Infos supplémentaires", cv_skills_text: "Expérimentée en Canva, PowerPoint et rédaction avancée. Activement impliquée dans des projets sociaux.",
+                skills_title: "Compétences & Langues", hard_skills: "Compétences techniques", soft_skills: "Qualités personnelles", languages: "Langues",
+                skill_vibe: "Vibe Coding", skill_canva: "Design Canva", skill_ppt: "PowerPoint", skill_excel: "Excel", skill_writing: "Rédaction avancée",
+                skill_observation: "Observation", skill_comm: "Communication", skill_adapt: "Adaptabilité", skill_time: "Gestion du temps", skill_creat: "Creativity", skill_team: "Travail d'équipe",
+                lang_ua: "Ukrainien (Maternel)", lang_ru: "russian (Maternel)", lang_en: "Anglais (C1)", lang_fr: "Français (A2)", lang_ee: "Estonien (A1)",
+                cv_title: "CV", cv_text: "Consultez mon CV complet pour un aperçu détaillé de mon parcours.", cv_view: "Voir le CV",
+                act_title: "Activités", act_teen: "Bénévole et mentor pour l'éducation sexuelle and la santé mentale chez « Teenergizer » en Ukraine.", act_hiv: "Création de l'exposition « HIV Awareness/Art » avec le « Human Rights Center » en Estonie.", act_startup_title: "Startup Garage", act_startup_desc: "Designer dans l'équipe marketing",
+                view_cert: "Voir le certificat", visit_website: "Visiter le site", work_title: "Expérience professionnelle",
+                exp_camp: "Animatrice de camp de vacances", exp_camp_desc: "Responsable de la sécurité et du divertissement des enfants.",
+                exp_dog: "Gardienne de chiens", exp_dog_desc: "Soin des animaux en l'absence de leurs propriétaires.",
+                connect: "Contactez-moi", contacts: "Coordonnées"
+            },
+            ee: {
+                nav_who: "Kes ma olen?", nav_edu: "Haridus", nav_cv: "Minu CV", nav_skills: "Oskused", nav_activities: "Tegevused", nav_work: "Töökogemus", nav_intern: "Praktika",
+                header_title: "Minu CV", header_name: "Anastasiia Neizhko",
+                who_title: "Kes ma olen?", who_text: "Tere! Ma olen Anastasiia Neizhko ja ma olen 18 aastat vana. Olen TalTechi äri ja halduse üliõpilane. Olen tähelepanelik detailide suhtes ja mulle meeldib õppida. Soovin jagada teiega oma kogemusi.",
+                edu_title: "Haridus", edu_taltech: "TalTech", edu_taltech_desc: "Tallinna Tehnikaülikooli ärijuhtimise esimese aasta üliõpilane.", edu_high: "CDE European Collegium", edu_high_desc: "Lõpetas keskhariduse heade akadeemiliste tulemustega.",
+                intern_title: "Praktika", intern_placeholder_title: "Praktika", intern_placeholder_desc: "Otsin hetkel praktikavõimalusi, et rakendada oma oskusi professionaalses keskkonnas.",
+                cv_header: "Minu CV", cv_about_title: "Minust", cv_about_text: "Punktuaalne, saab hästi hakkama väljakutsetega, positiivne, huvitatud erinevatest teemadest, suurepäraste suhtlemisoskustega ja kiire õppija.", cv_edu_title: "Haridus", cv_edu_1: "Lõpetanud gümнааiumi", cv_edu_2: "Tallinna Tehnikaülikooli ärijuhtimise esimese aasta üliõpilane", cv_work_title: "Töökogemus", cv_work_1: "Kasvataja lastelaagris", cv_work_2: "Koerahoidja", cv_work_3: "Vabatahtlik töö (andmete uurimine, mentorlus, aktivism, meeskonnatöö)", cv_skills_title: "Lisainfo", cv_skills_text: "Kogemus Canvas, PowerPointis ja kirjutamises. Aktiivne sotsiaalprojektides.",
+                skills_title: "Oskused ja keeled", hard_skills: "Erialased oskused", soft_skills: "Sotsiaalsed oskused", languages: "Keeled",
+                skill_vibe: "Vibe Coding", skill_canva: "Canva disain", skill_ppt: "PowerPoint", skill_excel: "Excel", skill_writing: "Kirjutamisoskus",
+                skill_observation: "Vaatlusoskus", skill_comm: "Suhtlemine", skill_adapt: "Kohanemisvõime", skill_time: "Aja planeerimine", skill_creat: "Loovus", skill_team: "Meeskonnatöö",
+                lang_ua: "Ukraina keel (Emakeel)", lang_ru: "russian (Emakeel)", lang_en: "Inglise keel (C1)", lang_fr: "Prantsuse keel (A2)", lang_ee: "Eesti keel (A1)",
+                cv_title: "CV", cv_text: "Vaadake minu täielikku CV-d, et näha põhjalikku üleваadet minu taustast.", cv_view: "Vaata CV-d",
+                act_title: "Tegevused", act_teen: "Vabatahtlik ja mentor seksuaalhariduse ning vaimse tervise valdkonnas Teenergizeris Ukrainas.", act_hiv: "Lõi projekti „HIV Awareness/Art exhibition“ koos Inimõiguste Keskusega Eestis.", act_startup_title: "Startup Garage", act_startup_desc: "Disainer turundusmeeskonnas",
+                view_cert: "Vaata sertifikaati", visit_website: "Külasta veebisaiti", work_title: "Töökogemus",
+                exp_camp: "Kasvataja lastelaagris", exp_camp_desc: "Vastutab laste turvalisuse, heaolu ja meeleлахutuse eest.",
+                exp_dog: "Koerahoidja", exp_dog_desc: "Lemmikloomade eest hoolitsemine omanike eemaloleku ajal.",
+                connect: "Võta ühendust", contacts: "Kontaktandmed"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+                const key = element.getAttribute("data-i18n");
+                if (translations[lang][key]) {
+                    element.innerText = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        function openModal(imgSrc, captionText) {
+            var modal = document.getElementById("certModal");
+            var modalImg = document.getElementById("img01");
+            var caption = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            caption.innerHTML = captionText;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("certModal");
+            modal.style.display = "none";
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
