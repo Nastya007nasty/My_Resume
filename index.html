@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anastasiia Neizhko | Resume</title>
+    <link rel="icon" type="image/svg+xml" href="favicon_new.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="cloud-container">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+    </div>
     <!-- Image Viewing Modal -->
     <div id="certModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
@@ -38,20 +45,24 @@
     </nav>
 
     <header class="main-header reveal">
-        <h1 data-i18n="header_title">My Resume</h1>
-        <h2 data-i18n="header_name">Anastasiia Neizhko</h2>
+        <div>
+            <h1 data-i18n="header_title">My Resume</h1>
+            <h2 data-i18n="header_name">Anastasiia Neizhko</h2>
+        </div>
     </header>
 
     <main>
         <section id="who-am-i" class="section reveal">
-            <div class="container intro-container">
-                <div class="photo-container">
-                    <img src="intro-photo.svg" alt="Anastasiia Neizhko" class="profile-photo">
-                </div>
-                <div class="text-container">
+            <div class="container">
+                <div class="who-title">
                     <h2 data-i18n="who_title">Who am I?</h2>
-                    <p data-i18n="who_text">Hi! My name is Anastasiia Neizhko and I am 18 years old. I am currently a Business & Administration student in TalTech university and a very active participant in volunteering and different activities. Also, I am quite observant to details and like to develop and learn more as I get a chance. I would like to share my skills and experience with you.</p>
-                    <div class="visual-accent"></div>
+                </div>
+                <div class="intro-content-wrapper">
+                    <img src="who-am-i-icon.svg" alt="Who am I icon" class="who-icon-left">
+                    <div class="text-container">
+                        <p data-i18n="who_text">Hi! My name is Anastasiia Neizhko and I am 18 years old. I am currently a Business & Administration student in TalTech university and a very active participant in volunteering and different activities. Also, I am quite observant to details and like to develop and learn more as I get a chance. I would like to share my skills and experience with you.</p>
+                        <div class="visual-accent"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -59,11 +70,33 @@
         <section id="internship" class="section reveal">
             <div class="container">
                 <h2 data-i18n="intern_title">Internship</h2>
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <i class="fas fa-briefcase"></i>
-                        <h4 data-i18n="intern_placeholder_title">Internship</h4>
-                        <p data-i18n="intern_placeholder_desc">Currently seeking internship opportunities to apply my skills in a professional environment.</p>
+                <div class="internship-content-wrapper">
+                    <div class="internship-main">
+                        <h3 class="intern-company">TalTech University, Marketing Department</h3>
+                        <p class="intern-meta"><strong>Field:</strong> Data Analysis | <strong>Duration:</strong> 3 months</p>
+                        
+                        <div class="intern-project-desc">
+                            <h4 class="sub-heading">Projects</h4>
+                            <p><strong>“Maj_konkurendid”</strong>: A comprehensive website featuring scraped and analyzed information about competitor universities, complete with interactive filtered tables and data visualizations.</p>
+                        </div>
+
+                        <div class="intern-skills-gained">
+                            <h4 class="sub-heading">Gained Skills</h4>
+GitHub, Visual Studio, Scraping, Advanced Excel, Vibe Coding, Favicon Creation
+                        </div>
+                    </div>
+
+                    <div class="intern-visuals">
+                        <h4 class="sub-heading">Internship Progress & Assets</h4>
+                        <div class="intern-charts">
+                            <img src="intern_chart1.png" alt="Internship Progress Chart 1" class="intern-image" onclick="openModal('intern_chart1.png', 'Internship Progress Chart 1')">
+                            <img src="intern_chart2.png" alt="Internship Progress Chart 2" class="intern-image" onclick="openModal('intern_chart2.png', 'Internship Progress Chart 2')">
+                        </div>
+                        <div class="intern-favicons">
+                            <img src="favicon_etis.svg" alt="Favicon Etis" class="favicon-preview" title="Favicon Etis" onclick="openModal('favicon_etis.svg', 'Favicon Etis')">
+                            <img src="favicon_m.svg" alt="Favicon M" class="favicon-preview" title="Favicon M" onclick="openModal('favicon_m.svg', 'Favicon M')">
+                            <img src="favicon_maj.svg" alt="Favicon Maj" class="favicon-preview" title="Favicon Maj" onclick="openModal('favicon_maj.svg', 'Favicon Maj')">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,13 +165,7 @@
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3 data-i18n="hard_skills">Hard Skills</h3>
-                        <div class="tags">
-                            <span class="tag" data-i18n="skill_vibe">Vibe Coding</span>
-                            <span class="tag" data-i18n="skill_canva">Canva Design</span>
-                            <span class="tag" data-i18n="skill_ppt">PowerPoint</span>
-                            <span class="tag" data-i18n="skill_excel">Excel</span>
-                            <span class="tag" data-i18n="skill_writing">Advanced Writing</span>
-                        </div>
+                            Vibe Coding, Canva Design, PowerPoint, Excel, Advanced Writing
                     </div>
                     <div class="skill-category">
                         <h3 data-i18n="soft_skills">Soft Skills</h3>
@@ -195,12 +222,18 @@
             <div class="container">
                 <h2 data-i18n="work_title">Work Experience</h2>
                 <div class="experience-item">
-                    <h3 data-i18n="exp_camp">Counselor at a children's camp</h3>
-                    <p data-i18n="exp_camp_desc">Responsible for the safety, well-being, and entertainment of children.</p>
+                    <div class="exp-text">
+                        <h3 data-i18n="exp_camp">Counselor at a children's camp</h3>
+                        <p data-i18n="exp_camp_desc">Responsible for the safety, well-being, and entertainment of children.</p>
+                    </div>
+                    <img src="49e5effb-6b54-4521-a3ab-b6db1062cb9c.jpg" alt="Children's Camp" class="exp-image" onclick="openModal('49e5effb-6b54-4521-a3ab-b6db1062cb9c.jpg', 'Counselor at a children\'s camp')">
                 </div>
                 <div class="experience-item">
-                    <h3 data-i18n="exp_dog">Dog sitter</h3>
-                    <p data-i18n="exp_dog_desc">Caring for pets and ensuring they are happy and healthy while their owners are away.</p>
+                    <div class="exp-text">
+                        <h3 data-i18n="exp_dog">Dog sitter</h3>
+                        <p data-i18n="exp_dog_desc">Caring for pets and ensuring they are happy and healthy while their owners are away.</p>
+                    </div>
+                    <img src="0cdd4109-7207-4329-af56-540f0a8d1163.jpg" alt="Dog Sitter" class="exp-image" onclick="openModal('0cdd4109-7207-4329-af56-540f0a8d1163.jpg', 'Dog sitter')">
                 </div>
             </div>
         </section>
